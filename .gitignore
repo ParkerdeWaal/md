@@ -1,0 +1,3 @@
+# ignore all compilied binaries and trajectory files
+*.out
+*.81

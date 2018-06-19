@@ -8,9 +8,9 @@ To compile and run:
 `gfortran -O3 nvt.f90 random_numbers.f`
 `./a.out > output`
 
-Output file contains time, hamiltonian, x, and y coordinates.
+Output file contains time, hamiltonian, kinetic energy, x, and y coordinates.
 
 to visualize output in gnuplot:
 `load'surf.gnu`
-`replot'output' u 3:4:2 w p`
+`replot'output' u 4:5:2 w p`
 

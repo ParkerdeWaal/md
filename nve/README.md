@@ -1,6 +1,6 @@
 Initial NVE practice system with the following potential energy function
 
-```javascript
+```fortran
 V(x,y) = 4(x^2+y^2-1)^2y^2 - e^{-4((x-1)^2+y^2)} - e^{-4((x+1)^2+y^2)} + e^{8(x-1.5)} + e^{8(x-+.5)} + e^{-4(y+0.25)} + 0.2e^{-8x^2}
 ```
 To compile and run:

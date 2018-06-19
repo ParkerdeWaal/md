@@ -50,9 +50,18 @@ do n=1,nstep
 	
 	!call calculate_Forces(px,py,fx,fy)
     if(MOD(n, 500).eq.0)then
-    	H = H + (vx**2d0+vy**2d0)/(2*nstep)
-    	Hs = sqrt(H)
-    	write(*,*) n, Hs, px, py
+		potential = 0d0
+
+		potential = 4d0*(px**2d0+py**2d0-1d0)**2d0*py**2d0 - &
+				exp(-4d0*((px-1d0)**2d0+py**2d0)) - &
+				exp(-4d0*((px+1d0)**2d0+py**2d0)) + &
+				exp(8d0*(px-1.5d0)) + &
+				exp(-8d0*(px+1.5d0)) + &
+				exp(-4d0*(py+0.25d0)) + &
+				0.2d0 * exp(-8d0*px**2d0)
+
+		H = 0.5d0 * (vx**2+vy**2) + potential
+    	write(*,*) n, H, px, py
 	endif
 enddo
 

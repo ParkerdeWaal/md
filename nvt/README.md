@@ -12,5 +12,5 @@ Output file contains time, hamiltonian, x, and y coordinates.
 
 to visualize output in gnuplot:
 `load'surf.gnu`
-`replot 'output' u 3:4:(0) w p`
+`replot'output' u 3:4:2 w p`
 
